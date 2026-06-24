@@ -1,0 +1,123 @@
+Revised Development Phases
+Phase 1 — Project Setup
+Initialize Next.js 15 + TypeScript
+Configure Tailwind CSS with brand colors
+Install shadcn/ui + Inter font
+Folder structure setup
+.env.example file
+Phase 2 — UI / Frontend (All Screens, No Backend)
+Build every screen with static/dummy data first:
+
+2.1 Login & Sign Up screens
+2.2 Home Feed screen
+2.3 Explore screen
+2.4 Recipe Details screen
+2.5 Create Recipe screen
+2.6 User Profile screen (own + other user)
+2.7 AI Assistant (floating panel + full screen)
+2.8 Shared layout (navbar, bottom nav, FAB button)
+
+Phase 3 — Supabase Backend Setup
+Create tables: profiles, recipes, likes, follows
+Row Level Security (RLS) policies
+Storage bucket for recipe images
+Auth trigger (auto-create profile on signup)
+
+Phase 4 — Connect Auth
+Register, login, logout working with Supabase Auth
+Password reset
+Protected routes / middleware
+Session persistence
+
+Phase 5 — Connect Recipes
+Create recipe → upload image to Supabase Storage
+Fetch recipes for Home Feed (real data)
+Recipe Details (real data)
+Edit + Delete own recipes
+
+Phase 6 — Connect Social Features
+Like / unlike recipes
+Follow / unfollow users
+Profile pages showing real published recipes + counts
+
+Phase 7 — Connect Explore
+Search recipes by title (real data)
+Search users by username
+Filters: cuisine, difficulty, cook time
+
+Phase 8 — Connect AI Assistant
+Gemini API integration
+Scaling, substitution, cooking Q&A working live
+
+Phase 9 — Final Polish & Deployment
+Responsive design check
+Loading + error + empty states
+Write README.md
+Shall I start Phase 1 now? Just confirm and I'll begin setting up the project.
+
+
+
+Development Phases
+Phase 1 — Project Setup & Foundation
+Initialize Next.js 15 + TypeScript project
+Configure Tailwind CSS with brand color palette
+Install and configure shadcn/ui
+Set up Supabase project (Auth, DB, Storage)
+Create .env.example and environment variables
+Configure Inter font
+
+Phase 2 — Database Schema & Supabase Setup
+Design and create tables: profiles, recipes, likes, follows
+Set up Row Level Security (RLS) policies
+Create Supabase Storage bucket for recipe images
+Set up auth triggers (auto-create profile on signup)
+
+Phase 3 — Authentication
+Login screen
+Sign Up screen
+Password reset flow
+Protected route middleware
+Persistent session handling
+
+Phase 4 — Recipe CRUD
+Create Recipe screen (image upload → Supabase Storage)
+Recipe Details screen
+Edit Recipe functionality
+Delete Recipe functionality
+
+Phase 5 — Home Feed & Navigation
+Layout with top nav (logo + bell) and bottom nav (Home/Explore/Create/Profile)
+Home Feed with recipe cards (image, title, creator, time, likes)
+Like/unlike functionality
+Click recipe → Recipe Details
+Click creator → User Profile
+
+Phase 6 — Explore Screen
+Search recipes by title (≥2 chars)
+Search users by username (≥2 chars)
+Filter by cuisine, difficulty, cook time
+Navigate to Recipe Details or User Profile from results
+
+Phase 7 — User Profiles & Social
+Own profile screen (edit avatar, username, bio)
+Other user's profile screen (follow/unfollow button)
+Published recipes grid on profile
+Follower/following counts
+
+Phase 8 — AI Assistant
+Floating action button (opens panel without leaving page)
+Full-screen AI Assistant screen
+Gemini API integration
+Suggested prompts (scale recipe, substitutions, cooking questions)
+
+Phase 9 — Polish & Responsive Design
+Mobile-first responsive layout
+Consistent color usage audit
+Loading states and error handling
+Empty states for feed/explore
+
+Phase 10 — Deployment & Docs
+Push to GitHub
+Deploy to Vercel
+Write README.md (setup, env vars, deployment steps)
+Final .env.example
